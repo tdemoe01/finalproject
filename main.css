@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+/*body {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+*/
+
+body {
+	background: rgb(65, 82, 143); 
+}
+
+#HR1, #HR2, #HR3, #HR4 {
+  width: 90%;
+  height: 4px;
+  /*border: 4px outset rgb(65, 82, 143);*/
+  border: 4px outset orange;
+}
+
+.hfDiv {
+	text-align: center;
+  padding: 4px;
+  color: white;
+  border: 6px outset orange;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+h1 {
+	text-align: center;
+  color: white;
+}
+
+.contentDivRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+  gap: 4px;
+  padding: 4px;
+  border: 6px outset orange;
+  color: white;
+  min-width: 400px;
+}
+
+.childDiv {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 6px outset orange;
+}
+
+.childA {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 0; /*Keeps div static size*/
+  flex-shrink: 1;
+  flex-basis: 250px;
+  min-height: 250px;
+  padding: .25em;
+}
+
+#contentPhoto{ /*Front page photo*/
+  display: block;
+  margin: 0px auto;
+  border: 6px outset orange;
+  width: 65%;
+  height: auto;
+}
+
+.contentPhoto, .contentVid  { /*Other page photos*/
+  display: block;
+  margin: 0px auto;
+  border: 6px outset orange;
+  width: 85%;
+  height: auto;
+}
+
+.contentImgZoom, .contentImgResp { /*Special cases depending on initial photo size and visibility*/
+  width: 85%;
+  border: 2px outset green;
+  border-radius: 4px;
+}
+
+.contentImgZoom:hover {
+  cursor: zoom-in;
+  transform:scale(1.35);  
+}
+
+
+sub {
+	color: orange;  
+}
+
+.childB {
+  flex-grow: 1; /*Allow div to grow into available space*/
+  flex-shrink: 1;
+}
+
+.contentDivCol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  gap: 4px;
+  padding: 4px;
+  border: 6px outset orange;
+  color: white;
+  min-width: 350px;
+}
+
+.childC {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.childD {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentInfo {
+  display: block;
+  margin: 0px auto;
+	width: 70%;
+  padding: 5px;
+  border: 2px outset #green;
+  padding: 1.5em;
+  border-radius: 8px;
+}
+
+.titleText {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.contentText {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.contentLink {
+  text-align: center;
+  font-size: .95em;
+  color: white;
+  text-decoration: none;
+  font-style: oblique;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 580px) {
+	.childA {
+    flex-grow: 1; /*Returns div to normal when screen gets smaller*/
+    max-width: 90%;
+    min-width: 85%;
+	}
+	
+  .childB {
+    border: 2px outset orange;
+		width: 100%;
+    padding: 2px;
+  }
+ 
+  .contentInfo {
+    display: block;
+    margin: 0px auto;
+    border: 2.5px outset green;
+    padding: 1em;
+    border-radius: 30px; 
+    width: auto; 
+  }
+  
+  .contentText{
+  	text-align: justify;  
+    word-spacing: .15em;
+    letter-spacing: .10em;
+    word-wrap: wrap;
+    word-wrap: break-word;
+    font-size: smaller;
+  }
+ 
+  .contentLink a{
+  	text-align: justify;  
+    word-wrap: wrap;
+    word-wrap: break-word;
+    font-size: smaller;  
+  }
+   
+  .contentPhoto {
+    display: block;
+    margin: 0px auto;
+    border: 6px outset orange;
+  	width: 75%;
+  	height: auto;
+  }
+  
+  .contentImgResp:hover {
+    cursor: zoom-in;
+    transform:scale(1.35);  
+  }
+}
